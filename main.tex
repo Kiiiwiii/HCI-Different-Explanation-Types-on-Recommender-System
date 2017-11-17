@@ -1,0 +1,127 @@
+\documentclass[paper=a4, fontsize=11pt, twocolumn]{scrartcl}
+\usepackage{authblk}
+\usepackage{makecell}
+\usepackage[T1]{fontenc}
+\usepackage{fourier} 
+\usepackage[english]{babel} 
+\usepackage{subcaption}
+\usepackage{amsmath,amsfonts,amsthm} 
+\usepackage{chngcntr}
+\counterwithout{equation}{subsection}
+\counterwithout{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{sectsty} 
+\allsectionsfont{\centering \normalfont\scshape} 
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+\setlength{\parskip}{0.5\baselineskip}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section} 
+\numberwithin{table}{section}
+\setlength\parindent{12pt}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\definecolor{linkcolor}{HTML}{00008B}
+\definecolor{shade}{HTML}{D4D7FE}
+\definecolor{text1}{HTML}{000000}
+\definecolor{headings}{HTML}{00008B}
+\hypersetup{colorlinks,breaklinks,
+            urlcolor=linkcolor,
+            linkcolor=linkcolor
+}
+\usepackage{listings}
+\lstset{
+  basicstyle={\small\ttfamily},
+  keywordstyle={\bfseries\color{NavyBlue}},
+  breaklines=true,
+  emphstyle={\bfseries\color{Rhodamine}},
+  commentstyle={\color{PineGreen!60!black}},
+  stringstyle={\rmfamily\color{YellowOrange}},
+  showstringspaces=false,
+  frame=shadowbox,
+  breakatwhitespace=false,
+  captionpos=b,
+  extendedchars=true,
+  keepspaces=true,
+  numbers=left,
+  numberstyle=\tiny,
+  rulecolor=\color{black},
+  rulesepcolor={\color{blue!20!white}},
+  showspaces=false,
+}
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+% WaterMarker
+\usepackage{draftwatermark}
+\SetWatermarkText{first draft}
+\SetWatermarkScale{1}
+
+% title settings
+\title{	
+\normalfont \normalsize 
+\textsc{A literatural overview on ``detailed'' and ``brief'' explanation in Recommender system, Winter Term 2017/2018, IFI LMU} \\ [25pt]
+% the horizontal line to separate texts
+\horrule{0.5pt} \\[0.4cm]
+\huge Literatural Overview on ``Detailed'' and ``Brief'' Explanation of Different Recommender Systems \\
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+\author{
+  Yifei Zhan\textsuperscript{}
+%   for multiple authors
+%   Changkun Ou\textsuperscript{*}
+%   Yifei Zhan\textsuperscript{\dag} and
+%   Zhe Li\textsuperscript{\ddag}
+}
+\affil{ \normalsize
+  Seminar Medieninformatik\\
+  \textit{Institute for Informatics, Ludwig-Maximilian University of Munich, Germany}\\
+  \emph{yifei.zhan@campus.lmu.de}
+} 
+\date{\today}
+
+
+\begin{document}
+% add the title(the section above)
+    \maketitle
+
+% automatically add tablecontents 目录
+% \tableofcontents
+
+
+    \KOMAoptions{titlepage=false}
+    \begin{abstract}
+    \textbf{Abstract}
+    This paper provides a literatural overview of two explanation types in recommender systems, which
+    are ``Detailed Explanation'' and ``Brief Explanation''. We also give some examples of both types and their analysis based on seven explanatory criterion.
+    The result shows that both types depend highly on their scenario.
+    When considering automobile scenario, we recommend the ``Brief Explanation'' and 
+    when considering desktop scenario, we recommend the ``Detailed Explanation''......
+    \end{abstract}
+
+\input{introduction}
+\input{body}
+\input{discussion-summary}
+
+\nocite{*}
+\addcontentsline{toc}{section}{\protect\numberline{}References}
+\bibliographystyle{unsrt}
+\bibliography{ref}
+\end{document}
+
+    
