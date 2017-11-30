@@ -1,0 +1,79 @@
+% !TEX spellcheck = en_US
+% !TeX program = pdflatex
+% !TeX TXS-program:bibliography = txs:///bibtex
+% !BIB program = bibtex
+
+%% LMU-MI-HS-Template
+%% This template is an adaptation of the IEEE InfoVis/Vis format
+%% http://www.cs.sfu.ca/~vis/Tasks/camera_tvcg.html
+%% Last update: Bastian Pfleging, 05.2016
+
+\documentclass[journal]{vgtc}                % final (journal style)
+\usepackage[english]{babel}
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage[hyphens]{url}
+\usepackage{float}
+\usepackage{dcolumn}
+\usepackage[backend=bibtex, style=numeric, isbn=true, doi=true, maxnames=99]{biblatex}
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\fontfamily{phv}\fontsize{16}{19}\bfseries}{\thechapter}{1em}{}
+
+\titleformat{\section}
+  {\normalfont\fontfamily{phv}\fontsize{12}{17}\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\fontfamily{phv}\fontsize{10}{15}\bfseries}{\thesubsection}{0.8em}{}
+
+\addbibresource{literature.bib}
+
+\DeclareGraphicsExtensions{.pdf,.jpg,.pdf,.mps,.png}
+\graphicspath{{img/}} 
+
+
+\normalfont
+
+
+%% Paper title.
+
+\title{A Literatural Overview on Explanation Types in Personalised Systems}
+
+%% Put your name here
+\author{Yifei Zhan}
+\authorfooter{
+%% change name, course (Media Informatics/Informatics/etc) and email for the footer
+\item
+  Yifei Zhan is studying Media Informatics at the University of Munich, Germany, E-mail: yifei.zhan@campus.lmu.de
+\item
+    This research paper was written for the Media Informatics Advanced Seminar ' Hauptseminar Medieninformatik', 2017
+}
+
+
+%% Abstract section.
+\abstract{
+This paper provides a literatural overview of two explanation types in recommender systems, which
+    are ``Detailed Explanation'' and ``Brief Explanation''. We also give some examples of both types and their analysis based on seven explanatory criterion.
+    The result shows that both types depend highly on their scenario.
+    When considering automobile scenario, we recommend the ``Brief Explanation'' and 
+    when considering desktop scenario, we recommend the ``Detailed Explanation''......
+
+} % end of abstract
+
+%% Keywords that describe your work.
+\keywords{Explanation types, Recommender system, Personalisation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\input{introduction}
+\input{body}
+\input{conclusion}
+%% Do not change the following:
+%\bibliographystyle{abbrv}
+\printbibliography
+\end{document}
