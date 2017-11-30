@@ -1,8 +1,14 @@
 \section{Detailed Explanation}
+    In this part, we take a look at ``detailed explanation'' and try to figure it out which
+    factors should be taken into consideration when we start to design a good detailed explanation.
+    And an example is also provided in order to illustrating how these factors are used in industrial product nowadays.
     \subsection{Seven Explanatory Criterion}
-        \indent The explanatory criterion\cite{tintarev2007survey} (see table \ref{table:1}), originally proposed by Nava Tintarev and Judith Masthoff, 
-        are mostly used when considering to design the explanation of a recommender system. 
 
+        \indent 
+        Like what we have already mentioned in the overview, the ``seven explanatory criterion''\cite{tintarev2007survey}(see table \ref{table:1}) from Nava Tintarev and Judith Masthoff
+        is the most popular standard used to evaluate the explanation. 
+        It is also comprehensive since it takes all aspects, which is relevant to design a good explanation, into consideration.
+        Thus these seven explanatory criterion are useful if we want to design a detailed explanation.
         \begin{table}[ht] 
             % ht used to attach the table to the position approximately where they are wrote here
             \centering
@@ -29,22 +35,38 @@
             \caption{Explanatory criteria and their definitions}
             \label{table:1}
         \end{table}
-        \indent Although they have different names in different researches. For example, 
-        Mohammed Z.Taie call them explanation attributes\cite{al2013explanations},
-        which represent the benefits explanations provide to recommender systems and Fatih Gedikli call them quality factors, 
-        which he used to evaluate different explanation types in his study\cite{gedikli2014should}.
-        They have the same purpose, that is, to make the system more understandable by users.
-        These criterion are listed here as follows:
+
+        \indent Although they may called differently in different research works
+        (``explanation attributes''\cite{al2013explanations}, ``seven possible aims for explanations''\cite{tintarev2012evaluating}
+        or ``quality factors''\cite{gedikli2014should}).
+        The basic idea is the same, which aims at making system more understandable by users.
         
-        \begin{enumerate}
-            \item \textbf{Transparency:} TODO:// write the intro
-            \item \textbf{Scrutability:} TODO:// write the intro
-            \item \textbf{Trust:} TODO:// write the intro
-            \item \textbf{Effectiveness:} TODO:// write the intro
-            \item \textbf{Persuasiveness:} TODO:// write the intro
-            \item \textbf{Efficiency:} TODO:// write the intro
-            \item \textbf{Satisfaction:} TODO:// write the intro
-        \end{enumerate}
+        \indent \textbf{\textit{Transparency:}} Transparency in a recommender system is related to
+         the capability of a system to expose the reasoning behind a recommendation to its users\cite{herlocker2000explaining}.
+         A recommender systems without explanation works like a ``black box'', which may lost trust from user. 
+         Thus, transparency is considered as an important factor to build user's trust in the system\cite{swearingen2002interaction}.
+
+        \indent \textbf{\textit{Scrutability:}} Scrutability means, in short, allow users to tell the system it is wrong.
+        It can also be seen as a kind of User Control, which allows users to correct reasoning from system\cite{czarkowski2002scrutable}.
+        
+        \indent \textbf{\textit{Trust:}} Trust is sometimes linked with transparency.
+        Studies have already shown that transparency and 
+        the possibility of interaction with recommender systems increases user trust\cite{felfernig2007knowledge}\cite{sinha2002role}.
+        
+        \indent \textbf{\textit{Effectiveness:}} An effective explanation can help users to make a better decision.
+        If an item suggested by the system is the one the user really likes, such explanation can be considered as effective.
+
+        \indent \textbf{\textit{Persuasiveness:}} Persuasiveness, sometimes referred to as promotion, 
+        is strongly related to effectiveness and 
+        can be defined as the ability of an explanation type to convince the user to accept or disregard certain items\cite{gedikli2014should}.
+
+        \indent \textbf{\textit{Efficiency:}} An explanation is usually considered to be efficient when
+         it helps the user to decide more quickly or when it helps to reduce the cognitive effort required in the decision process\cite{gedikli2014should}.
+         The most common approach to measure it is to look at the iteration time between users and recommender system before users reach their goals.
+
+        \indent \textbf{\textit{Satisfaction:}} The user’s overall satisfaction with a recommender system is assumed to be 
+        strongly related to the perceived quality of its recommendations and explanations\cite{swearingen2002interaction}.
+ 
     \subsection{Examples of Detailed Explanation}
         An example of explanation in amazon.com.
         TODO: (Write Analysis based on seven explanatory criterion) 

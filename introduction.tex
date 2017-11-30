@@ -1,30 +1,51 @@
 \section{Introduction}
-  \indent \textbf{TODO:// What is personalised system ??}  Recommender Systems (RSs) are software tools and techniques providing suggestions for items to be of use to a user\cite{ricci2011introduction}.
-  A simplest form of them is a ranking list, where users  can find the most popular items
-  and in turn adjust their choices (like the ranking list of AppStore). Although it is not
-  personalized, it is still a kind of recommendation. 
+
+  \indent Personalization has already existed for a long time. The first emergence of this phenomena 
+  can be traced back to antiquity,
+  when experienced merchants provided different customers with different products or services\cite{adomavicius2008personalization}. However, 
+  the real interest of personalization arose in the mid to late 1990s with the advancement of the Web technologies\cite{don2011managing}.
+  From then on, more efforts have been investigated in this field in order to decode the essence of personalization.
   
-  \indent More complex forms of RS are like \textbf{TODO:// explain what it is}
-  content-based recommendation, user-based recommendation and recommendation based on 
-  collaborative filtering, where users get more specific recommendations based on their 
-  previous behaviors, which are, for example, the history views in Youtube or history purchased item in Amazon.
+  \indent In the world of personalization, the most common form of it is recommender systems (RS), which can intelligently
+  give users personalized suggestions. Based on different algorithms, the recommender systems can also be different.
+  Content-based recommendation and collaborative filtering recommendation are two popular types of recommendation, on which large amount 
+  of researches have been done. The first one, content-based recommendation, observes utility of items experienced previously and
+  their attributes for a given user is taken as input to predict the utility of other items to that user\cite{balabanovic1997fab}.
+  A simpler explanation can be ``User A has bought a novel. And based on this history, a magazine is more likely to be recommended to him than a pair of shoes,
+  because novels and magazines are more in common than novels and shoes ''. The second type, collaborative filtering, observes utility for user-item pairs is taken
+  as input to predict utility for unobserved user-item pairs\cite{balabanovic1997fab}. One example can be ``User A(1,2) has bought items 1 and 2, user B(1,2,3) has bought items 1,2 and 3 and user C(2,4) has bought items 2 and 4.
+  Thus, item 3 is more likely to be recommended to user A than item 4, because user A and user B are more similar than user A and user C''.
   
-  \indent With the development of the Internet, the privacy issue gains more and more importance in the society
-  and people are willing to know which information is ``consumed'' by the system. They tend to be doubt if
-  the system behaves another way as they expected. In this case, a good explanation of the behaviors of a recommendation system 
+  \indent A good recommendation algorithm is no doubt indispensable for a recommender system and the way of explaining its complex algorithm to users
+  plays also an important role. With the development of the Internet, the privacy issue gains more and more importance in the society
+  and people are willing to know which information is ``consumed'' by the system. They may lose their trust on the system if
+  it behaves another way as they expected. In this case, a good explanation of the behaviors of a recommender system 
   can help inspire user trust and loyalty, increase satisfaction, make it quicker and easier for users to find what they want\cite{tintarev2007survey}.
 
+  The following content are divided into four parts. The first part provided an overview of different researches on explanations in recommender systems. 
+  The second part focused on detailed explanation and its criterion, while short explanation and its possible criterion are emphasized the third part.
+  In the end, the last part discussed on some limitations in recent researches, proposed several research questions for future research and provided
+  a summary of this whole paper.
+
 \section{Overview}
-    \indent A large amount of researches have been done in order to find out what makes a good explanation.
-    David Mcsherry proposed a case-based reasoning (CBR) approach\cite{mcsherry2005explanation} to product recommendation
-    that offers important benefits in terms of the ease with 
-    which the recommendation process can be explained and the system\rq s recommendations can be justified.
-    
+
+    \indent 
+    User experience research is increasingly attracting researchers’ attention in the recommender system community. 
+    Some researchers, like Li Chen\cite{pu2011user} and Bart P. Knijnenburg\cite{knijnenburg2012explaining}, focus on a larger scale and try to figure out what constitutes an effective and satisfying recommender system.
+    Other researchers focus on a more detailed part, that is the explanation of the system. They have proved that
+    a good explanation can boost users' trust towards the system and help them in decision making process\cite{tintarev2007survey}\cite{van2004designing}\cite{pu2007trust}.
+
+    \indent David Mcsherry proposed a case-based reasoning (CBR) approach\cite{mcsherry2005explanation} to product recommendation
+    that offers important benefits in terms of the ease with which the recommendation process can be explained and the system\rq s recommendations can be justified.
+
     \indent Another perspective focused on how the soundness and completeness of the explanations impacts the fidelity of end users' mental models\cite{kulesza2013too},
     where the soundness means the extend to which an explanation describes all of the underlying system
     and the completeness means how truthful each element in an explanation is with respect to the underlying system.
 
-    \indent Besides, TODO: a brief intro to: Toolkit to Support Intelligibility in Context-Aware Applications\cite{lim2010toolkit}.
+    \indent And Brian Y. Lim and Anind K. Dey dived into question types. In their work, Toolkit Support Intelligibility in Context-Aware Applications\cite{lim2010toolkit}, they
+    divided explanation types based on different questions types, that is Why, Why Not, How To, What, What If, Inputs, Outputs and Certainty.
     
-    \indent TODO: The most popular standard which is used to evaluate the explanation is the explanatory criterion\cite{tintarev2007survey}.
+    \indent Finally, a great breakthrough has been made by Nava Tintarev and Judith Masthoff.
+    They have proposed what they called ``seven possible advantages of an explanation facility''\cite{tintarev2007survey}.
+    These seven advantages are often taken as a standard criterion to evaluate different types of explanation in other researchers' works.
 
