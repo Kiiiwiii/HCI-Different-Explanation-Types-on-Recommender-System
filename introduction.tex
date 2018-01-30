@@ -1,52 +1,25 @@
 \section{Introduction}
 
-  \indent Personalization has already existed for a long time. The first emergence of this phenomena 
-  can be traced back to antiquity,
-  when experienced merchants provided different customers with different products or services\cite{adomavicius2008personalization}. However, 
-  the real interest of personalization arose in the mid to late 1990s with the advancement of the Web technologies\cite{don2011managing}.
-  From then on, more efforts have been investigated in this field in order to decode the essence of personalization.
-  
-  \indent In the world of personalization, the most common form of it is recommender systems (RS), which can intelligently
-  give users personalized suggestions. By adopting different algorithms, the recommender systems can also be different.
-  Content-based recommendation and collaborative filtering recommendation are two popular types of recommendation, on which large amount 
-  of researches have been done. The first one, content-based recommendation, observes utility of items experienced previously and
-  their attributes for a given user is taken as input to predict the utility of other items to that user\cite{balabanovic1997fab}.
-  A simpler explanation can be ``User A has bought a novel. And based on this history, a magazine is more likely to be recommended to him than a pair of shoes,
-  because novels and magazines are more in common than novels and shoes ''. The second type, collaborative filtering, observes utility for user-item pairs is taken
-  as input to predict utility for unobserved user-item pairs\cite{balabanovic1997fab}. One example can be ``User A(1,2) has bought items 1 and 2, user B(1,2,3) has bought items 1,2 and 3 and user C(2,4) has bought items 2 and 4.
-  Thus, item 3 is more likely to be recommended to user A than item 4, because user A and user B are more similar than user A and user C''.
-  
-  \indent A good recommendation algorithm is no doubt indispensable for a recommender system and the way of explaining its complex algorithm to users
-  plays also an important role. With the development of the Internet, the privacy issue gains more and more importance in the society
-  and people are willing to know which information is ``consumed'' by the system. They may lose their trust on the system if
-  it behaves another way as they expected. In this case, a good explanation of the behaviors of a recommender system 
-  can help inspire user trust and loyalty, increase satisfaction, make it quicker and easier for users to find what they want\cite{tintarev2007survey}.
+  \indent Personalization is no more a novelty. The first emergence of this phenomenon dated back to antiquity
+  when experienced merchants provided different customers with different products or services \cite{adomavicius2008personalization}. However, the real interest of personalization did not arise until the late 1990s with the advancement of the Web technologies \cite{don2011managing}.
+  From then on, more studies have been done in this field, and people try to explore the essence of personalization.
 
-  The following content are divided into four parts. The first part provided an overview of different researches on explanations in recommender systems. 
-  The second part focused on two possible methods or standards, which are recently often used by researches to evaluate and design explanations of recommender systems.
-  while the third extracts some factors from these two methods, which can be used to design ``short explanations'' in automotive scenario.
-  And the last part discussed on some limitations in recent researches, proposed several research questions for future research and provided
-  a summary of this whole paper.
+  \indent In the world of personalization, one thing we might often hear about is recommender systems (RS), which intelligently give users personalized suggestions. The recommendations can vary from algorithm to algorithm. The most common forms are the content-based recommendation, and the collaborative filtering recommendation. The first one, content-based recommendation, observes utility of previous items and then use this attribute to predict the utility of other items \cite{balabanovic1997fab}. An example can be ``User A has bought a novel. And based on this bought history, a magazine is more likely to be recommended to him than a pair of shoes, because novels and magazines are more in common than novels and shoes ''. The second type, collaborative filtering, observes utility for user-item pairs which is then used to predict utility for unobserved user-item pairs \cite{balabanovic1997fab}. One example can be ``User A(1,2) has bought items 1 and 2, user B(1,2,3) has purchased items 1,2 and 3 and user C(2,4) has bought items 2 and 4. As a recommendation for user A, item 3 is more likely to be suggested to user A than item 4, since user A and user B are more similar than user A and user C''.
 
-\section{Overview}
+  \indent A good recommendation algorithm is no doubt indispensable for a recommender system, and the way of explaining its complex algorithm to users
+  plays also an important role. With the development of the Internet, the privacy issue becomes more and more important. The newly EU regulation even requires explanations for complex algorithms \cite{goodman2016european}. People are willing to know which information is ``consumed'' by the system and they may lose their trust in one system if it behaves differently as they expected. 
+  In this case, a proper explanation of a recommender system can help to inspire users' trust and loyalty, increase satisfaction, make it quicker and easier for users to find what they want \cite{tintarev2007survey}. In order to answer the question, "What makes a good explanation," we check through different studies and try to summarize a set criteria in this paper. Besides, we particularly focus on brief explanations.
 
-    \indent 
-    User experience research is increasingly attracting researchers’ attention in the recommender system community. 
-    Some researchers, like Li Chen\cite{pu2011user} and Bart P. Knijnenburg\cite{knijnenburg2012explaining}, focus on a larger scale and try to figure out what constitutes an effective and satisfying recommender system.
-    Other researchers focus on a more detailed part, that is the explanation of the system. They have proved that
-    a good explanation can boost users' trust towards the system and help them in decision making process\cite{tintarev2007survey}\cite{van2004designing}\cite{pu2007trust}.
+  \indent The rest of the paper is divided into four parts. The first section provides an overview of different studies on explanations in recommender systems. The second part focuses on two frameworks, which are often used by other researchers to evaluate and design explanations of recommender systems. The third section extracts some principles from the two frameworks, which can be used to design ``brief explanations'' in an automotive scenario. And in the last part, we summarize our contribution and propose several questions for future studies.
 
-    \indent David Mcsherry proposed a case-based reasoning (CBR) approach\cite{mcsherry2005explanation} to product recommendation
-    that offers important benefits in terms of the ease with which the recommendation process can be explained and the system\rq s recommendations can be justified.
+\section{Literature Review}
 
-    \indent Another perspective focused on how the soundness and completeness of the explanations impacts the fidelity of end users' mental models\cite{kulesza2013too},
-    where the soundness means the extend to which an explanation describes all of the underlying system
-    and the completeness means how truthful each element in an explanation is with respect to the underlying system.
+    \indent In this section, we try to give readers an overview of state of the art. We introduce in this part some relevant studies which focus on the recommendation and its explanations.
 
-    \indent And Brian Y. Lim and Anind K. Dey dived into question types. In their work, Toolkit Support Intelligibility in Context-Aware Applications\cite{lim2010toolkit}, they
-    divided explanation types into eight factors, which are Why, Why Not, How To, What, What If, Inputs, Outputs and Certainty. More details are explained in later section.
+    \indent User experience research is increasingly attracting researchers’ attention. Some researchers, like Li Chen \cite{pu2011user}, and Bart P.Knijnenburg \cite{knijnenburg2012explaining}, put emphasis on recommender system and try to figure out what constitutes an effective and satisfying recommender system. Other researchers focus on its explanations. They have proved that a good explanation can boost users' trust towards the system and help them in decision making process \cite{tintarev2007survey} \cite{van2004designing} \cite{pu2007trust}.
     
-    \indent Finally, a great breakthrough has been made by Nava Tintarev and Judith Masthoff.
-    They have proposed what they called ``seven possible advantages of an explanation facility''\cite{tintarev2007survey}.
-    These seven advantages are often taken as a standard criterion to evaluate different types of explanation in other researchers' works.
+    \indent One possible way to evaluate explanations of a recommender system is to look at the soundness and completeness \cite{kulesza2013too}. The soundness means the extent to which an explanation describes all of the underlying systems. Meanwhile, the completeness means how truthful each element in an explanation is, in the perspective of a user, in the underlying system. The author has found out that LSHC(which means low soundness and high completeness) provides participants with the best-perceived cost/benefit ratio of attending to the explanations. 
 
+    \indent Another possible method to evaluate the explanations is to categorize explanations in different types of questions. In Lim's work, Toolkit Support Intelligibility in Context-Aware Applications \cite{lim2010toolkit}, they divided the explanation of a context-aware system into eight questions, which are Why, Why Not, How To, What, What If, Inputs, Outputs, and Certainty. In the findings, they emphasized on streamlining explanations while maintaining access to the rich explanation capabilities, which makes explanations usable and quickly consumable.    
+    
+    \indent Finally, a significant breakthrough is made by Nava Tintarev and Judith Masthoff. They have proposed what they called ``seven possible advantages of an explanation facility \cite{tintarev2007survey}.'' These seven advantages are often taken as a standard criteria in evaluating and designing explanations for a recommender system.
